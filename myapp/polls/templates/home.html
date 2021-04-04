@@ -1,0 +1,89 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+				<title>HOME | PROFILE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+			  <link rel="stylesheet" href="{% static 'main.css' %}" />
+         <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+         <meta name="theme-color" content="#2d2d2d" />
+</head>
+<body>
+				<nav class="head">
+				  <div class="logo">
+				    <h1 class="cho">ATIE <span>STUDIOS</span></h1>
+				    <p class="pp" onclick="shownav()">&#9776</p>
+				  </div>
+				</nav>
+				<div class="nave" id="btn">
+				  <p class="close" onclick="clo()">&times</p>
+				  <ul >
+				    <li><a href="gallery/">Home</a></li>
+				    <li><a href="#">Contact</a></li>
+				    <li><a href="#">Services</a></li>
+				    <li><a href="#">Skilla</a></li>
+				    <li><a href="#">About</a></li>
+				  </ul>
+				</div>
+				{% for post in posts %}
+				<div class="main">
+				  <div class="card">
+				    <img class="im" src="{% static 'images/b.jpg' %}" alt="im" />
+				    <div class="tex">
+				      <h2 style="text-align:center">{{post.title}}</h2>
+				    <p>{{post.text}}</p>
+				    </div>
+				  </div>
+				  {% endfor %}
+	        <div class="card">
+				    <img class="im" src="images/b.jpg" alt="im" />
+				    <div class="tex">
+				    <p>A simple image card with an images just in testing mood of my PROFILE</p>
+				    </div>
+				  </div>
+	       <div class="card">
+				    <img class="im" src="images/b.jpg" alt="im" />
+				    <div class="tex">
+				    <p>A simple image card with an images just in testing mood of my PROFILE</p>
+				    </div>
+				  </div>
+	       <div class="card">
+				    <img class="im" src="images/b.jpg" alt="im" />
+				    <div class="tex">
+				    <p>A simple image card with an images just in testing mood of my PROFILE</p>
+				    </div>
+				  </div>
+	       <div class="card">
+				    <img class="im" src="images/b.jpg" alt="im" />
+				    <div class="tex">
+				    <p>A simple image card with an images just in testing mood of my PROFILE</p>
+				    </div>
+				  </div>
+	        <div class="card">
+				    <img class="im" src="images/b.jpg" alt="im" />
+				    <div class="tex">
+				    <p>A simple image card with an images just in testing mood of my PROFILE</p>
+				    </div>
+				  </div>
+				  
+				  
+				  
+				  
+				 <div class="section">
+				   <img class="imge" src="images/b.jpg" alt="hello" />
+				   <div class="tex">
+				   <h3 class="h">TRUST CHÖCHA</h3>
+				   <p>I AM A FULLSTACK WEB DEVELOPER based in Lusaka Zambia with two years experience in the industry 
+				   </p>
+				   </div>
+				 </div>
+				</div>
+	  <script src="{% static 'main.js' %}" type="text/javascript" charset="utf-8"></script>
+	  <script src="save.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="server.js" type="text/javascript" charset="utf-8"></script>
+	  
+	  </body>
+</html>
